@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-ecommernce"
+    }
+  },
+  "defaultProject": "angular-ecommernce",
+  "cli": {
+    "analytics": false
+  }
 }
