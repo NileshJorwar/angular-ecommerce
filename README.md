@@ -1,3 +1,7 @@
+# Run angular app
+- ng serve --open (opens on port 4200)
+- ng serve (just runs app but you have to manually hit the endpoint)
+- ng serve --port 4400 --open (runs app directly on browser on port 4400)
 # E-Commerece Release 2.0
 - Actual Shopping cart building using template 
 - Needs to download the bootstrap npm install bootstrap and @fortawesome/fontawesome-free because template has bootstrap and fontawesome contents 
