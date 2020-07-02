@@ -1,27 +1,9 @@
-# AngularEcommernce
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# E-Commerece Release 2.0
+- Actual Shopping cart building using template 
+- Needs to download the bootstrap npm install bootstrap and @fortawesome/fontawesome-free because template has bootstrap and fontawesome contents 
+- Make sure to check the Node Modules and package.json for added dependencies
+- Check angular.json for adding Global Styles, no need to manually reference styles in components and add the entries for the bootstrap and font awesome in angular.json
+- To avoid Caching issues in index.html, use query unique query pattern 
+``
+<link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
+``
