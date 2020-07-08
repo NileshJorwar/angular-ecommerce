@@ -12,4 +12,5 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
 ``
 -- Generate class `ng generate class common/product-category'
--- Generate class `ng generate component components/product-category-menu'
+-- Generate comp `ng generate component components/product-category-menu'
+-- Add `ng add @angular/localize' for adding bootstrap pagination via npm tooling
