@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/common/product';
 import { ProductService } from 'src/app/services/product.service';
 import { ActivatedRoute } from '@angular/router';
+import { CartItem } from 'src/app/common/cart-item';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -25,6 +27,7 @@ export class ProductListComponent implements OnInit {
   previousKeyword:string = null;
 
   constructor(private productService: ProductService,
+    private cartService: CartService,
     private route: ActivatedRoute) { }
 
   //Similar to PostConstruct method of SpringBoot ngOnInit()
@@ -64,6 +67,7 @@ export class ProductListComponent implements OnInit {
     //     this.products = data;
     //   }
     // );
+    
     this.productService.searchProductsPaginate(this.thePageNumber-1, 
                                               this.thePageSize, 
                                               theKeyword).subscribe(this.processResult());
@@ -112,4 +116,14 @@ export class ProductListComponent implements OnInit {
     this.listProducts();
 
   }
-}
+  
+  addToCart(theProduct:Product){
+    console.log(`Adding to cart: ${theProduct.unitPrice}, ${theProduct.name}`);
+
+    const theCartItem = new CartItem(theProduct);
+    console.log(`Inside product list: ${theProduct.name}, ${theProduct.id}, ${theProduct.unitPrice},${theProduct.imageUrl}`);
+    console.log(`Inside product list CartItem:  ${theCartItem.quantity}`);
+    
+    this.cartService.addToCart(theCartItem);
+  }
+} 
